@@ -1,16 +1,120 @@
-# React + Vite
+# 📚 Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly interactive web application designed to help book lovers discover, track, and organize their personal library. Users can manage their reading journey by cataloging books they've read or want to read, sort them dynamically, and view analytical charts of their reading habits.
 
-Currently, two official plugins are available:
+Built with **React 19**, **Tailwind CSS v4**, and **DaisyUI v5** for a premium, responsive, and visually stunning user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **📖 Reading List Tracker**: Mark books as "Read" or add them to your "Wishlist" from the details page.
+- **⚠️ Smart Validations**: Automatically prevents duplicate additions and warns if a book is already in the read list when trying to wishlist it.
+- **🔄 Wishlist to Read Transition**: Seamlessly transition books from your wishlist to your read list.
+- **📊 Reading Analytics**: A beautiful, custom curved bar chart showing page numbers for your reading list, powered by **Recharts**.
+- **⚡ Dynamic Sorting**: Easily sort your read and wishlist books by **Rating** or **Page Count**.
+- **🚀 React 19 `use` Hook**: Leverages React 19's new features to resolve promises and fetch data cleanly inside components.
+- **🔔 Interactive Feedback**: Custom toasts powered by **React Toastify** for success and warning notifications.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack & Libraries
+
+- **Frontend Core**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vite.dev/)
+- **Routing**: [React Router 7](https://reactrouter.com/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) & [DaisyUI v5](https://daisyui.com/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/) & [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/)
+
+---
+
+## 📁 Project Structure
+
+```text
+book-vibe/
+├── public/
+│   ├── booksData.json       # Mock database containing book details
+│   └── _redirects           # Netlify redirects config
+├── src/
+│   ├── assets/              # App images and icons
+│   ├── components/
+│   │   ├── homepage/        # Banner, AllBooks, Footer
+│   │   ├── listedBooks/     # Read List, Wishlist List
+│   │   ├── navbar/          # Top Navigation Bar
+│   │   └── ui/              # Reusable UI components (BookCard)
+│   ├── context/
+│   │   └── BookContext.jsx  # Global state manager for read list/wishlist
+│   ├── layout/
+│   │   └── MainLayout.jsx   # Shared app layout wrapper
+│   ├── pages/
+│   │   ├── bookDetails/     # Book details page
+│   │   ├── books/           # Listed books page (Tabs & Sort)
+│   │   ├── chart/           # Pages to read visualization (Recharts)
+│   │   ├── errorPage/       # 404 page
+│   │   └── homepage/        # Homepage container
+│   ├── routes/
+│   │   └── Routes.jsx       # React Router configurations
+│   ├── index.css            # Tailwind V4 & DaisyUI styles imports
+│   ├── main.jsx             # Entry point
+│   └── App.jsx
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+
+Ensure you have **Node.js** (v18.0.0 or higher) and **npm** installed on your machine.
+
+### ⚙️ Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ajmainhossain7/book-vibe.git
+   cd book-vibe
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the local development server:**
+   ```bash
+   npm run dev
+   ```
+
+   The app will be running locally at `http://localhost:5173`.
+
+### 📦 Build for Production
+
+To build the project for production, run:
+```bash
+npm run build
+```
+This generates a production-ready `dist` folder.
+
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+---
+
+## 🎨 Design & UI
+
+- **Harmonious Palette**: Designed using soft pastels and a green accents theme matching modern dashboard layouts.
+- **Responsiveness**: Fully responsive layout designed for mobile, tablet, and desktop viewports.
+- **Interactive States**: Clean hover states, button click feedback, and glassmorphism headers.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
